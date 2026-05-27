@@ -1,0 +1,45 @@
+body{
+
+    font-family: Arial;
+
+    background-color: lightblue;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+}
+
+.calculator{
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+
+input{
+
+    padding: 10px;
+
+    margin: 10px;
+
+}
+
+button{
+
+    padding: 10px 15px;
+
+    margin: 5px;
+
+    cursor: pointer;
+
+}

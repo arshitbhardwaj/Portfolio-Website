@@ -1,0 +1,241 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Homepage</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    /* HEADER */
+    header{
+      background:#1e3a8a;
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    header h1{
+      margin-bottom:10px;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#111827;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:15px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      padding:10px 15px;
+      transition:0.3s;
+      border-radius:5px;
+    }
+
+    /* HOVER EFFECT */
+    nav a:hover{
+      background:#2563eb;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .hero h2{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background:#2563eb;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      transition:0.3s;
+    }
+
+    /* BUTTON HOVER */
+    .btn:hover{
+      background:#1d4ed8;
+      transform:scale(1.05);
+    }
+
+    /* SERVICES SECTION */
+    .services{
+      padding:50px 20px;
+      background:white;
+    }
+
+    .services h2{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .service-container{
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .service-box{
+      background:#e5e7eb;
+      padding:30px;
+      flex:1 1 300px;
+      max-width:350px;
+      border-radius:10px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .service-box:hover{
+      transform:translateY(-8px);
+      background:#dbeafe;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* =========================
+       RESPONSIVE MEDIA QUERIES
+       ========================= */
+
+    /* TABLET */
+    @media(max-width:768px){
+
+      .hero h2{
+        font-size:32px;
+      }
+
+      nav{
+        gap:10px;
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width:480px){
+
+      header h1{
+        font-size:24px;
+      }
+
+      .hero h2{
+        font-size:26px;
+      }
+
+      .hero p{
+        font-size:14px;
+      }
+
+      nav{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .service-container{
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>My Personal Website</h1>
+    <p>Welcome to my homepage</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Hello, I'm Arshit</h2>
+    <p>
+      I am a web development student learning HTML, CSS, Flexbox,
+      hover effects, and responsive web design.
+    </p>
+
+    <a href="#" class="btn">Explore More</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+      <div class="service-box">
+        <h3>Web Design</h3>
+        <p>
+          Beautiful and responsive website designs for all devices.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Frontend Development</h3>
+        <p>
+          Modern UI development using HTML, CSS, JavaScript and Flexbox.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Responsive Layout</h3>
+        <p>
+          Mobile-friendly layouts using media queries and flexible grids.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 My Personal Website | All Rights Reserved</p>
+  </footer>
+  
+
+</body>
+</html>

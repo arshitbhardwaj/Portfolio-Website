@@ -1,0 +1,69 @@
+body{
+    background-color: white;
+}
+
+#main-heading{
+    color: darkblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+.intro{
+    color: darkgreen;
+    font-size: 20px;
+}
+
+.card{
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    width: 300px;
+}
+
+.box{
+    border: 3px solid black;
+    background-color: yellow;
+    width: 200px;
+    display: block;
+}
+
+/* Box 1 */
+.box1{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Box 2 */
+.box2{
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Box 3 */
+.box3{
+    padding: 30px;
+    margin: 30px;
+}
+
+/* Flex Container */
+.container{
+    display: flex;
+    gap: 20px;
+}
+
+/* Columns */
+.column{
+    background-color: lightgreen;
+    border: 2px solid black;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+}

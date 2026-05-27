@@ -1,0 +1,41 @@
+body{
+
+    font-family: Arial;
+
+    background-color: lightblue;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 50px;
+
+}
+
+.container{
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    width: 600px;
+
+}
+
+button{
+
+    padding: 10px 20px;
+
+    margin-bottom: 20px;
+
+    cursor: pointer;
+
+}
+
+li{
+
+    margin-bottom: 10px;
+
+}
