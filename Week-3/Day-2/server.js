@@ -1,37 +1,63 @@
 const express = require("express");
-const app = express();
+const path = require("path");
 
-// Middleware for logging requests
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());
+
+// Middleware
 app.use((req, res, next) => {
-    console.log(`[${new Date().toLocaleString()}] ${req.method} ${req.url}`);
+    console.log("Request Time:", new Date().toLocaleString());
     next();
 });
 
 // Static files
 app.use(express.static("public"));
 
+// Users array
+let users = [
+    { id: 1, name: "Rahul" },
+    { id: 2, name: "Aditi" }
+];
+
 // Routes
 app.get("/", (req, res) => {
-    res.send("Welcome to my Express Info Server");
+    res.send("Welcome to Express Server");
 });
 
 app.get("/about", (req, res) => {
-    res.send("This is my Express mini project.");
+    res.send("This is my Express Mini Project");
 });
 
 app.get("/contact", (req, res) => {
-    res.send("Contact: yourname@email.com");
+    res.send("Contact: arshit@example.com");
+});
+
+app.get("/weather/:city", (req, res) => {
+    const city = req.params.city;
+
+    res.json({
+        city: city,
+        temp: "30°C"
+    });
 });
 
 app.get("/api/users", (req, res) => {
-    const users = [
-        { id: 1, name: "Rahul" },
-        { id: 2, name: "Aditi" }
-    ];
-
     res.json(users);
 });
 
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
+app.post("/api/users", (req, res) => {
+    const newUser = req.body;
+
+    users.push(newUser);
+
+    res.json({
+        message: "User Added",
+        users
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
